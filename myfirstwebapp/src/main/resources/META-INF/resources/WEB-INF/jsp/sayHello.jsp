@@ -1,0 +1,1 @@
+<p>My First SpringBoot application from the JSP file</p>
