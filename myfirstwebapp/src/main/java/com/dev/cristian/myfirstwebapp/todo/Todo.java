@@ -1,6 +1,7 @@
 package com.dev.cristian.myfirstwebapp.todo;
 
 import jakarta.validation.constraints.Size;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
@@ -39,6 +40,10 @@ public class Todo {
 
     public boolean getDone() {
         return done;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Override
