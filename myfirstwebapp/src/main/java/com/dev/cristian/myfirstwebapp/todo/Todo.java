@@ -1,18 +1,26 @@
 package com.dev.cristian.myfirstwebapp.todo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
 
+@Entity
 public class Todo {
-    private int id;
+    @Id
+    @GeneratedValue
+    private Integer id;
     private String username;
 @Size(min=10, message = "Enter at least 10 characters")
     private String description;
     private LocalDate targetDate;
     private boolean done;
+
+    public Todo() {}
 
     public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
         this.id = id;
@@ -42,9 +50,17 @@ public class Todo {
         return done;
     }
 
+    public void setId (Integer id) {this.id = id;}
+
     public void setUsername(String username) {
         this.username = username;
     }
+
+    public void setDescription(String description) {this.description = description;}
+
+    public void setTargetDate(LocalDate targetDate) {this.targetDate = targetDate;}
+
+    public void setDone(boolean done) {this.done = done;}
 
     @Override
     public String toString() {
