@@ -59,6 +59,7 @@ public class SurveyResource {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
         else {
+            System.out.println(question);
             return question;
         }
     }

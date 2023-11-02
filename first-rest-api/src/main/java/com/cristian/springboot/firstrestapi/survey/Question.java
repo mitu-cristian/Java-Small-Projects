@@ -19,6 +19,16 @@ public class Question {
         this.correctAnswer = correctAnswer;
     }
 
+    @Override
+    public String toString() {
+        return "Question{" +
+                "id='" + id + '\'' +
+                ", description='" + description + '\'' +
+                ", options=" + options +
+                ", correctAnswer='" + correctAnswer + '\'' +
+                '}';
+    }
+
     public String getId() {
         return id;
     }
@@ -31,7 +41,7 @@ public class Question {
         return options;
     }
 
-    public String GetCorrectAnswer() {
+    public String getCorrectAnswer() {
         return correctAnswer;
     }
 
