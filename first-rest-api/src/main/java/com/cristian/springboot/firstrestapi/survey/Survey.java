@@ -11,6 +11,10 @@ public class Survey {
 
     public Survey() {}
 
+    public Survey(String id) {
+        this.id = id;
+    }
+
     public Survey(String id, String title, String description, List<Question> questions) {
         this.id = id;
         this.title = title;

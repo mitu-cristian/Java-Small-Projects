@@ -11,6 +11,10 @@ public class Question {
 
     public Question() {}
 
+    public Question(String id) {
+        this.id = id;
+    }
+
     public Question(String id, String description, List<String> options, String correctAnswer) {
         super();
         this.id = id;
